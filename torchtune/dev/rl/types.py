@@ -30,6 +30,8 @@ class GRPOTrajectory(NamedTuple):
     logprobs: torch.Tensor = None  # [B x G, L]
     ref_logprobs: torch.Tensor = None  # [B x G, L]
     advantages: torch.Tensor = None  # [B x G]
+    rewards: torch.Tensor = None
+    successes: torch.Tensor = None
     masks: torch.Tensor = None  # [B x G, P+L, P+L]
     position_ids: torch.Tensor = None  # [B x G, P+L]
     response_padding_masks: torch.Tensor = None  # [B x G, L]
